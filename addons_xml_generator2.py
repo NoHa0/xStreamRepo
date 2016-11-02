@@ -122,10 +122,16 @@ class Generator:
 
 
 def zipfolder(foldername, target_dir, zips_dir, addon_dir):
+    exclude_dirs = {'.git'}
+    exclude_files = ['.gitignore', '.gitattributes']
+
     zipobj = zipfile.ZipFile(zips_dir + foldername, 'w', zipfile.ZIP_DEFLATED)
     rootlen = len(target_dir) + 1
-    for base, dirs, files in os.walk(target_dir):
+    for base, dirs, files in os.walk(target_dir, topdown=True):
+        dirs[:] = [d for d in dirs if d not in exclude_dirs]
         for f in files:
+            if f in exclude_files:
+                continue
             fn = os.path.join(base, f)
             zipobj.write(fn, os.path.join(addon_dir, fn[rootlen:]))
     zipobj.close()
