@@ -123,7 +123,7 @@ class Generator:
 
 def zipfolder(foldername, target_dir, zips_dir, addon_dir):
     exclude_dirs = {'.git'}
-    exclude_files = ['.gitignore', '.gitattributes']
+    exclude_files = ['.gitignore', '.gitattributes', '.DS_Store']
 
     zipobj = zipfile.ZipFile(zips_dir + foldername, 'w', zipfile.ZIP_DEFLATED)
     rootlen = len(target_dir) + 1
