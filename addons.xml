@@ -2,7 +2,7 @@
 <addons>
 <addon id="plugin.video.xstream"
     name="xStream"
-    version="3.2.0"
+    version="3.3.0"
     provider-name="xStream-Team (originator: Lynx187, murphy, MaxMustermann)">
  <requires>
    <import addon="xbmc.python"                 version="2.14.0"/>
@@ -27,6 +27,23 @@
    <platform>all</platform>
    <news>Big THX to all contributors!
    For more information check out the commit history at GitHub.
+
+
+xStream v3.3.0 - 18.01.2017
+================================================================================
+
+FIXES…
+ - [dokustream] fix for kategories
+ - [hdfilme] don’t resolve the google-links anymore
+ - [streamdream] fix for series
+ - [tata] fix for series
+ - [tata] fix for genres
+ - [tata] fix links in plugin
+ - [tata] fix useless spaces
+
+NEW…
+ - [general] add support for remote resolving of streams (e.g. via web interfaces)
+ - [filmpalast] show openload hd as hoster
 
 
 xStream v3.2.0 - 23.12.2016
@@ -278,8 +295,8 @@ Other:
  </extension>
 </addon>
 
-<addon id="repository.xbmchub" name="TVADDONS.ag Addon Repository" version="1.0.6" provider-name="tvaddons.ag">
-	<extension point="xbmc.addon.repository" name="TVADDONS.ag Addon Repository">
+<addon id="repository.xbmchub" name="TVADDONS.AG Add-on Repository" version="1.0.7" provider-name="tvaddons.ag">
+	<extension point="xbmc.addon.repository" name="TVADDONS.AG Add-on Repository">
 	<dir>
 		<info compressed="false">https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml</info>
 		<checksum>https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5</checksum>
@@ -290,11 +307,14 @@ Other:
 		<datadir zip="true">https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary>The Best Third Party Addons for Kodi, Brought to you by TVADDONS.ag</summary>
-		<description>The Best Third Party Addons for Kodi, Brought to you by TVADDONS.ag</description>
+		<summary>Unofficial Kodi Addons from TVADDONS.AG</summary>
+		<description>Download and install unofficial Kodi add-ons from the TVADDONS.AG add-on repository. Please visit www.tvaddons.ag for addon support.
+
+Kodi is a registered trademark of the XBMC Foundation. We are not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</description>
+         <disclaimer>TVADDONS.AG did not make all the add-ons in this repository and is not responsible for their content.</disclaimer>
 		<platform>all</platform>
-                <forum>http://forums.tvaddons.ag/forums/113-TVADDONS-AG-ADDON-REPOSITORY</forum>
-                <website>http://www.tvaddons.ag/</website>
+                <forum>https://forums.tvaddons.ag</forum>
+                <website>https://www.tvaddons.ag</website>
 	</extension>
 </addon>
 
